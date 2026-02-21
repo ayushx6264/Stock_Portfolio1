@@ -10,6 +10,15 @@ from stock import Portfolio
 app = Flask(__name__)
 portfolio = Portfolio()
 
+# ── Pre-populate with sample data ──────────────────────────────
+portfolio.buy("AAPL", 25)
+portfolio.buy("NVDA", 8)
+portfolio.buy("MSFT", 12)
+portfolio.buy("AMZN", 15)
+portfolio.buy("JPM", 20)
+portfolio.buy("NFLX", 6)
+portfolio.buy("JNJ", 30)
+
 
 @app.route("/")
 def index():
